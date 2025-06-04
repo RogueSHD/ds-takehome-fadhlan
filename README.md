@@ -17,7 +17,7 @@ This repository contains the datasets and instructions for our Data Science take
    - Assesment 2: Case Study 
 4. Submit your answers within 24 hours via: 
    - **Option A**: Upload your completed work to your GitHub and share the link to anusia@bonuslink.com.my
-   - **Option B**: Zip your work and share via Google Drive/Dropbox/email and grant access to the email above.
+  
 
 
 Good luck!
