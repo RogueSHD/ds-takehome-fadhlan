@@ -15,7 +15,7 @@ This repository contains the datasets and instructions for our Data Science take
 2. You are required to complete the following:
    - Assessment 1: General Big Query Compatible Questions 
    - Assesment 2: Case Study 
-4. Submit your answers within 24 hours via: 
+4. Submit your answers within 3 days via: 
    - **Option A**: Upload your completed work to your GitHub and share the link to anusia@bonuslink.com.my
   
 
