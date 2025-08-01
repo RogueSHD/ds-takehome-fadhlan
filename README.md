@@ -9,7 +9,7 @@
 
    **Write a query to find the number of unique users who triggered both a `signup` and a `purchase` event within 7 days.**
 
-   **Answer:** (For the Script can see in ds-assessment-1_answer)
+   **Answer:** 
 
     WITH signups AS (
     SELECT user_id, event_timestamp AS signup_time
