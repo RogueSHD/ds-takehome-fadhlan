@@ -1,7 +1,7 @@
 
 ## 🟡 Case Study: **Data Scientist**
 
-### 📝 Objective:
+## 📝 Objective:
 
 Evaluate your ability to model real-world business challenges, explain your thinking clearly, and apply data science techniques appropriately.
 
@@ -39,7 +39,7 @@ You are given the following mock datasets:
 4. **Explainability & Business Implications**
 
    * Share key features influencing churn (e.g., SHAP, permutation importance)
-   * Recommend how the business can act on these insights
+   * Recommend how the business can act on these insights#
 
 ---
 

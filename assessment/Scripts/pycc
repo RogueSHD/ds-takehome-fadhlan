@@ -1,0 +1,3 @@
+#!c:\users\fadhlan\data-takehome-test_ds\assessment\scripts\python.exe
+from numba.pycc import main
+main()
