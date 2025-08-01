@@ -188,5 +188,5 @@
 
 # ds-case-study - 2 answer
 
-# Answer can be founf in ds-case-study-2.ipynb 
+# Answer can be founf in ds-case-study-2.ipynb inside notebook folder
 
