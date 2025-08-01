@@ -43,16 +43,16 @@
 
     **Answer 1: High value customers, based on the dataset given high value customers is customers who spend more, below is how to derive high value customers using sql**
 
-    SELECT 
+       SELECT 
         member_id, 
         SUM(spend_amount) AS total_spend,
         COUNT(*) AS num_transactions,
         MAX(timestamp) AS last_purchase
-    FROM 
+       FROM 
         transactions
-    GROUP BY 
+       GROUP BY 
         member_id
-    ORDER BY 
+       ORDER BY 
         total_spend DESC
 
 
