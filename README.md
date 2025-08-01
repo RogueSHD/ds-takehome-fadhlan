@@ -44,31 +44,31 @@
     **Answer 1: High value customers, based on the dataset given high value customers is customers who spend more, below is how to derive high value customers using sql**
 
        SELECT 
-        member_id, 
-        SUM(spend_amount) AS total_spend,
-        COUNT(*) AS num_transactions,
-        MAX(timestamp) AS last_purchase
+           member_id, 
+           SUM(spend_amount) AS total_spend,
+           COUNT(*) AS num_transactions,
+           MAX(timestamp) AS last_purchase
        FROM 
-        transactions
+           transactions
        GROUP BY 
-        member_id
+           member_id
        ORDER BY 
-        total_spend DESC
+           total_spend DESC
 
 
     **Answer 2: Seasonality trend is where we notice that certain events or data points increase or decrease during certain times: below is how i query the table to find seasonality trends**
 
-    SELECT 
-        DATEPART(year, timestamp) AS year,
-        DATEPART(month, timestamp) AS month,
-        SUM(spend_amount) AS total_monthly_spend,
-        COUNT(*) AS transaction_count
-    FROM 
-        transactions
-    GROUP BY 
-        DATEPART(year, timestamp), DATEPART(month, timestamp)
-    ORDER BY 
-        year, month
+       SELECT 
+           DATEPART(year, timestamp) AS year,
+           DATEPART(month, timestamp) AS month,
+           SUM(spend_amount) AS total_monthly_spend,
+           COUNT(*) AS transaction_count
+       FROM 
+           transactions
+       GROUP BY 
+           DATEPART(year, timestamp), DATEPART(month, timestamp)
+       ORDER BY 
+           year, month
 
 
 3. **Python Task:**
@@ -77,9 +77,9 @@
    * Write Python code to prepare this data for a logistic regression model.
    * Briefly explain how you'd evaluate the model performance.
 
-   **For this part i created a sample data for the above features about 2000 rows for testing called "churn_dataset.csv"**
+         **For this part i created a sample data for the above features about 2000 rows for testing called "churn_dataset.csv"**
 
-   **Answer can be found in ds-assessment-1.py file that i have created along the explaination as well :)**
+         **Answer can be found in ds-assessment-1.py file that i have created along the explaination as well :)**
 
 4. **Machine Learning:**
    You are asked to build a customer segmentation model.
@@ -89,25 +89,25 @@
 
    Answer 1:
 
-   1. Algorithms to Use
+         1. Algorithms to Use
 
-    For customer segmentation (where the goal is to group customers by similar behaviors or characteristics, and you usually do not have a target label), you use unsupervised learning algorithms, most commonly:
+             For customer segmentation (where the goal is to group customers by similar behaviors or characteristics, and you usually do not have a target label), you use unsupervised learning algorithms, most commonly:
 
-    a. K-Means Clustering
-    Why: Simple, scalable, and works well when you expect well-separated groups.
+             a. K-Means Clustering
+             Why: Simple, scalable, and works well when you expect well-separated groups.
 
-    How: Assigns each customer to a cluster so that customers in the same cluster are similar.
+             How: Assigns each customer to a cluster so that customers in the same cluster are similar.
 
-    b. Hierarchical Clustering
-    Why: Good for smaller datasets and to visualize nested groupings (dendrograms).
+             b. Hierarchical Clustering
+             Why: Good for smaller datasets and to visualize nested groupings (dendrograms).
 
-    How: Builds a tree of clusters based on distance metrics.
+             How: Builds a tree of clusters based on distance metrics.
 
-    c. DBSCAN
-    Why: Useful if clusters are of uneven shape/density and to detect outliers.
+             c. DBSCAN
+             Why: Useful if clusters are of uneven shape/density and to detect outliers.
 
-    How: Groups points that are closely packed together, marking outliers as noise.
-
+             How: Groups points that are closely packed together, marking outliers as noise.
+   
 
     Answer 2:
 
@@ -147,44 +147,44 @@
 
    Answer 1:
 
-    Step 1: Define “Conversion”
-    Conversion = User makes their first purchase.
+          Step 1: Define “Conversion”
+          Conversion = User makes their first purchase.
 
-    Step 2: Prepare the Dataset
-    Target variable: Binary (converted=1 if user made a purchase, otherwise 0).
+          Step 2: Prepare the Dataset
+          Target variable: Binary (converted=1 if user made a purchase, otherwise 0).
 
-    Features: User demographics, engagement data, signup channel, app usage, etc.
+          Features: User demographics, engagement data, signup channel, app usage, etc.
 
-    Step 3: Exploratory Data Analysis
-    Compare features between converted and non-converted users (e.g., average age, app opens, sign-up source).
+          Step 3: Exploratory Data Analysis
+          Compare features between converted and non-converted users (e.g., average age, app opens, sign-up source).
 
-    Visualize: Bar charts, distributions, etc.
+          Visualize: Bar charts, distributions, etc.
 
-    Step 4: Statistical Analysis or Predictive Modeling
-    Use Logistic Regression (or other classification models) to model the probability of conversion.
+          Step 4: Statistical Analysis or Predictive Modeling
+          Use Logistic Regression (or other classification models) to model the probability of conversion.
 
-    Look for significant predictors (e.g., age, location, number of app opens, etc.).
+          Look for significant predictors (e.g., age, location, number of app opens, etc.).
 
-    Check feature importance (how much each feature influences this conversion).
+          Check feature importance (how much each feature influences this conversion).
 
-    Step 5: Validate Findings
-    Test the model on holdout data.
+          Step 5: Validate Findings
+          Test the model on holdout data.
 
-    Use metrics like AUC, accuracy, or lift.
+          Use metrics like AUC, accuracy, or lift.
 
     Answer 2:
 
-    1- Use plain language, not technical terms.
+          1- Use plain language, not technical terms.
 
-    2- Explain in analogical terms : for example EDA, what is EDA? It is more like getting to know more about your     data and discover any insights or etc same goes to people if we want to know more about the person we need to know his/her background to truly understands them
+          2- Explain in analogical terms : for example EDA, what is EDA? It is more like getting to know more about your     data and discover any insights or etc same goes to people if we want to know more about the person we need to know his/her background to truly                understands them
 
-    3- Show visuals: e.g., “Users with more logins have a higher conversion rate” (show a bar chart).
+          3- Show visuals: e.g., “Users with more logins have a higher conversion rate” (show a bar chart).
 
-    4- Highlight actionable insights:
+          4- Highlight actionable insights:
 
-    - “Encouraging new users to open the app more frequently may increase conversion.”
+             - “Encouraging new users to open the app more frequently may increase conversion.”
 
-    - “Referral programs are effective at driving conversions.”
+             - “Referral programs are effective at driving conversions.”
 
 # ds-case-study - 2 answer
 
